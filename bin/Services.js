@@ -40,3 +40,19 @@ exports.createFolder = async function (req,res){
     res.json({"status":"Done!"});
     
 }
+exports.getChats = async function (req,res){
+    try {
+        // here we get an access token
+        const authResponse = await auth.getToken(auth.tokenRequest);
+
+        // call the web API with the access token
+        const chats = await fetch.callApi(process.env.GRAPH_ENDPOINT+'/v1.0/me/chats' , authResponse.accessToken)
+        .then(function(Chatsdata){
+            res.json(Chatsdata);
+            });
+
+        // display result
+    } catch (error) {
+        res.json(res)
+    }
+}
