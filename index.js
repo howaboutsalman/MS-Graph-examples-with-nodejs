@@ -11,5 +11,7 @@ app.get('/', service.Home );
 app.get('/users', service.getUser);
 app.get('/groups', service.getGroups);
 app.post('/create', service.createFolder);
-app.get('/chats', service.getChats);
+app.get('/chats/:id', service.getChats);
+app.get('/send', service.send);
+app.get('/mailFolder/:id', service.getMailFolders);
 app.listen(3000,() => {  console.log(`Server Running on Port ${PORT} `);});
