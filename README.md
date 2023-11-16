@@ -3,8 +3,9 @@
 * ENV
 
 ```
-        clientId
-        authority
-        clientSecret
+CLIENT_SECRET
+TENANT_ID
+AAD_ENDPOINT
+CLIENT_ID
 
 ```
