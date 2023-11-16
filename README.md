@@ -2,7 +2,7 @@
 
 * ENV
 
-```
+```bash
 CLIENT_SECRET=
 TENANT_ID=
 AAD_ENDPOINT=
